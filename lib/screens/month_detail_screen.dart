@@ -12,17 +12,25 @@ class MonthDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Mayo 2025'),
-        backgroundColor: Colors.pink[100],
+        backgroundColor: Color(0xFFF5C6D6), // rosa pastel
+        elevation: 0,
       ),
       body: ListView.builder(
         itemCount: comprobantes.length,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.pink[50],
+            color: Color(0xFFFFEEF2),
             margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
             child: ListTile(
-              title: Text(comprobantes[index]),
-              trailing: Icon(Icons.receipt),
+              leading: Icon(Icons.receipt_long, color: Colors.pinkAccent),
+              title: Text(
+                comprobantes[index],
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+              trailing: Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () {
                 Navigator.pushNamed(context, '/detail');
               },

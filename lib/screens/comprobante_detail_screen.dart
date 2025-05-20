@@ -31,9 +31,21 @@ class ComprobanteDetailScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, '/saved');
                   },
-                  child: Text('Guardar Comprobante'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green[200], // Botón pastel
+                    foregroundColor: Colors.black87, // Texto oscuro legible
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: Text(
+                    'Guardar Comprobante',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
+              SizedBox(height: 16),
             ],
           ),
         ),

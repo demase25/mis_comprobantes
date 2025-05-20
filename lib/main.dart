@@ -5,18 +5,22 @@ import 'screens/comprobante_detail_screen.dart';
 import 'screens/saved_confirmation_screen.dart';
 
 void main() {
-  runApp(MisComprobantesApp());
+  runApp(RecibidoApp());
 }
 
-class MisComprobantesApp extends StatelessWidget {
+class RecibidoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mis Comprobantes',
+      title: 'Recibido!',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Nunito',
         scaffoldBackgroundColor: const Color(0xFFFFF8F0),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Color(0xFF9EC1A3), // verde pastel
+          secondary: Color(0xFFF2B5D4), // rosado pastel
+        ),
       ),
       initialRoute: '/',
       routes: {
